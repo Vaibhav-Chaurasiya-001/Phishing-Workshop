@@ -1,0 +1,23 @@
+{
+  "entities": {
+    "Certification": {
+      "title": "Certification",
+      "description": "Professional certifications earned by the trainer.",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "issuer": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "externalUrl": { "type": "string" },
+        "earnedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["title", "imageUrl"]
+    }
+  },
+  "firestore": {
+    "certifications": {
+      "schema": "Certification",
+      "description": "A collection of certifications."
+    }
+  }
+}

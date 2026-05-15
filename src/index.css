@@ -1,0 +1,68 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
+@theme {
+  --font-mono: "Space Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-cyber-bg: #0b0f14;
+  --color-cyber-bg-alt: #111820;
+  --color-cyber-card: #151d26;
+  --color-cyber-card-alt: #1a2330;
+  --color-cyber-border: #1e2d3d;
+  --color-cyber-teal: #00d4aa;
+  --color-cyber-teal-dim: #00a882;
+  --color-cyber-blue: #3d8bff;
+  --color-cyber-white: #e8f0f8;
+  --color-cyber-muted: #6b82a0;
+  --color-cyber-danger: #ff4e6a;
+
+  --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-glow: glow 2s ease-in-out infinite;
+
+  @keyframes blink {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+  }
+}
+
+@keyframes glow {
+  0%, 100% { opacity: 1; filter: drop-shadow(0 0 5px var(--color-cyber-teal)); }
+  50% { opacity: 0.7; filter: drop-shadow(0 0 15px var(--color-cyber-teal)); }
+}
+
+@layer base {
+  body {
+    @apply bg-cyber-bg text-cyber-white font-sans selection:bg-cyber-teal/30 selection:text-cyber-teal;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-cyber-card/85 backdrop-blur-xl border border-cyber-border;
+  }
+  
+  .glass-card {
+    @apply bg-cyber-card border border-cyber-border rounded-2xl p-8 relative overflow-hidden transition-all duration-300;
+  }
+
+  .neon-border {
+    @apply relative after:absolute after:inset-0 after:rounded-[inherit] after:border after:border-cyber-teal/20 after:pointer-events-none;
+  }
+
+  .cyber-grid {
+    background-image: 
+      linear-gradient(rgba(0, 212, 170, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 212, 170, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .text-shimmer {
+    @apply bg-[linear-gradient(110deg,#00d4aa,45%,#e8f0f8,55%,#00d4aa)] bg-[length:200%_100%] bg-clip-text text-transparent animate-[shimmer_3s_linear_infinite];
+  }
+
+  @keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+}
