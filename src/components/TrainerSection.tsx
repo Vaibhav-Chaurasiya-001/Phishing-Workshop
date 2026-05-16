@@ -18,6 +18,8 @@ interface Highlight {
   image?: string;
 }
 
+import { RevealItem } from './ScrollReveal';
+
 export default function TrainerSection() {
   const credentials = [
     'TryHackMe — Top 1% Globally',
@@ -102,102 +104,122 @@ export default function TrainerSection() {
   return (
     <section id="trainer" className="py-24">
       <div className="max-w-7xl mx-auto px-6">
-        <motion.div
-           initial={{ opacity: 0, y: 20 }}
-           whileInView={{ opacity: 1, y: 0 }}
-           viewport={{ once: true }}
-           className="mb-16"
-        >
-          <div>
+        <div className="mb-16">
+          <RevealItem>
             <p className="font-mono text-[10px] text-cyber-teal tracking-[0.2em] uppercase mb-4">// About the Trainer</p>
+          </RevealItem>
+          <RevealItem>
             <h2 className="text-4xl sm:text-5xl font-bold mb-6">Led by an Offensive Security Enthusiast</h2>
+          </RevealItem>
+          <RevealItem>
             <p className="text-cyber-muted max-w-2xl text-lg">Not theory from a textbook — real knowledge from someone who actively practices ethical hacking and cybersecurity.</p>
-          </div>
-        </motion.div>
+          </RevealItem>
+        </div>
 
         <div className="grid lg:grid-cols-[380px,1fr] gap-16 items-start">
-          <motion.div
-             initial={{ opacity: 0, scale: 0.95 }}
-             whileInView={{ opacity: 1, scale: 1 }}
-             viewport={{ once: true }}
-             className="glass-card !p-10 relative overflow-visible"
-          >
-            <div className="absolute top-0 right-0 p-4 opacity-10">
-               <Zap size={120} />
-            </div>
+          <RevealItem className="h-full">
+            <motion.div
+              whileHover={{ y: -5 }}
+              className="glass-card !p-10 relative overflow-visible h-full bg-cyber-card-alt/30"
+            >
+              <div className="absolute top-0 right-0 p-4 opacity-10">
+                 <Zap size={120} />
+              </div>
 
-            <div className="w-24 h-24 rounded-full border-2 border-cyber-teal bg-cyber-bg-alt flex items-center justify-center font-mono text-3xl font-bold text-cyber-teal shadow-[0_0_30px_rgba(0,212,170,0.2)] mb-8 mx-auto">
-              VC
-            </div>
-            
-            <h3 className="text-2xl font-bold text-center mb-1">Vaibhav Chaurasiya</h3>
-            <p className="font-mono text-[10px] text-cyber-teal tracking-[0.2em] uppercase text-center mb-8">&gt;_ Penetration Testing Enthusiast</p>
-            
-            <div className="space-y-3">
-              {credentials.map((cred) => (
-                <div key={cred} className="flex items-center gap-3 bg-cyber-bg-alt/50 border border-cyber-border rounded-lg px-4 py-3 text-sm">
-                  <CheckCircle2 size={16} className="text-cyber-teal shrink-0" />
-                  <span className="text-cyber-white/80">{cred}</span>
-                </div>
-              ))}
-            </div>
-          </motion.div>
+              <div className="w-24 h-24 rounded-full border-2 border-cyber-teal bg-cyber-bg-alt flex items-center justify-center font-mono text-3xl font-bold text-cyber-teal shadow-[0_0_30px_rgba(0,212,170,0.2)] mb-8 mx-auto">
+                VC
+              </div>
+              
+              <h3 className="text-2xl font-bold text-center mb-1">Vaibhav Chaurasiya</h3>
+              <p className="font-mono text-[10px] text-cyber-teal tracking-[0.2em] uppercase text-center mb-8">&gt;_ Penetration Testing Enthusiast</p>
+              
+              <div className="space-y-3">
+                {credentials.map((cred) => (
+                  <motion.div 
+                    key={cred} 
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    className="flex items-center gap-3 bg-cyber-bg-alt/50 border border-cyber-border rounded-lg px-4 py-3 text-sm"
+                  >
+                    <CheckCircle2 size={16} className="text-cyber-teal shrink-0" />
+                    <span className="text-cyber-white/80">{cred}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          </RevealItem>
 
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-          >
-            <h3 className="text-3xl font-bold mb-8">Passionate about cybersecurity education.</h3>
+          <div>
+            <RevealItem>
+              <h3 className="text-3xl font-bold mb-8">Passionate about cybersecurity education.</h3>
+            </RevealItem>
             <div className="space-y-6 text-cyber-white/70 text-lg leading-relaxed mb-12">
-                <p>I'm Vaibhav Chaurasiya — a Penetration Testing Enthusiast who believes that awareness is the most powerful defense against cyber threats.</p>
-                <p>I've spent hundreds of hours practicing on real hacking platforms, understanding exactly how attackers think and operate. I've already conducted successful workshops and received great feedback — which is why I'm bringing this to your school.</p>
-                <p>My goal is simple: equip your students with the knowledge to protect themselves online, taught in a way that actually sticks.</p>
+                <RevealItem>
+                  <p>I'm Vaibhav Chaurasiya — a Penetration Testing Enthusiast who believes that awareness is the most powerful defense against cyber threats.</p>
+                </RevealItem>
+                <RevealItem>
+                  <p>I've spent hundreds of hours practicing on real hacking platforms, understanding exactly how attackers think and operate. I've already conducted successful workshops and received great feedback — which is why I'm bringing this to your school.</p>
+                </RevealItem>
+                <RevealItem>
+                  <p>My goal is simple: equip your students with the knowledge to protect themselves online, taught in a way that actually sticks.</p>
+                </RevealItem>
                 
-                <div className="grid sm:grid-cols-2 gap-4">
+                <motion.div 
+                  className="grid sm:grid-cols-2 gap-4"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={{
+                    hidden: { opacity: 0 },
+                    visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
+                  }}
+                >
                   {highlights.map((h, idx) => {
                     const hasImage = !!h.image;
                     
                     return (
-                      <motion.div 
-                        key={idx} 
-                        className={`glass-card !p-6 hover:border-cyber-teal/40 group transition-all relative overflow-hidden cursor-pointer`}
-                        onClick={() => {
-                          if (hasImage) setSelectedItem({ type: 'image', src: h.image!, title: h.val });
-                          else if (h.url) setSelectedItem({ type: 'iframe', src: h.url, title: h.val, externalUrl: h.url });
-                        }}
-                      >
-                         <div className="flex items-center gap-3 mb-3 relative z-10">
-                            {h.icon}
-                            <span className="font-mono text-[9px] text-cyber-muted tracking-[0.2em] uppercase">{h.label}</span>
-                         </div>
-                         
-                         <div className="flex items-end justify-between relative z-10">
-                          <p className="font-bold text-cyber-white group-hover:text-cyber-teal transition-colors underline decoration-transparent group-hover:decoration-cyber-teal/30 underline-offset-4">{h.val}</p>
-                          {(h.url || hasImage) && (
-                            <ExternalLink size={14} className="text-cyber-muted opacity-0 group-hover:opacity-100 transition-opacity" />
-                          )}
-                         </div>
-
-                         {/* Subtle Background Preview for Certs */}
-                         {hasImage && (
-                           <div className="absolute top-0 right-0 w-24 h-full pointer-events-none opacity-10 group-hover:opacity-20 transition-opacity overflow-hidden grayscale group-hover:grayscale-0">
-                             <img 
-                               src={h.image} 
-                               alt="" 
-                               className="w-full h-full object-cover translate-x-4" 
-                               referrerPolicy="no-referrer"
-                             />
+                      <RevealItem key={idx}>
+                        <motion.div 
+                          whileHover={{ y: -5, scale: 1.02 }}
+                          className={`glass-card !p-6 hover:border-cyber-teal/40 group transition-all relative overflow-hidden cursor-pointer h-full bg-cyber-card-alt/30`}
+                          onClick={() => {
+                            if (hasImage) setSelectedItem({ type: 'image', src: h.image!, title: h.val });
+                            else if (h.url) setSelectedItem({ type: 'iframe', src: h.url, title: h.val, externalUrl: h.url });
+                          }}
+                        >
+                           <div className="flex items-center gap-3 mb-3 relative z-10">
+                              {h.icon}
+                              <span className="font-mono text-[9px] text-cyber-muted tracking-[0.2em] uppercase">{h.label}</span>
                            </div>
-                         )}
-                      </motion.div>
+                           
+                           <div className="flex items-end justify-between relative z-10">
+                            <p className="font-bold text-cyber-white group-hover:text-cyber-teal transition-colors underline decoration-transparent group-hover:decoration-cyber-teal/30 underline-offset-4">{h.val}</p>
+                            {(h.url || hasImage) && (
+                              <ExternalLink size={14} className="text-cyber-muted opacity-0 group-hover:opacity-100 transition-opacity" />
+                            )}
+                           </div>
+
+                           {/* Subtle Background Preview for Certs */}
+                           {hasImage && (
+                             <div className="absolute top-0 right-0 w-24 h-full pointer-events-none opacity-10 group-hover:opacity-20 transition-opacity overflow-hidden grayscale group-hover:grayscale-0">
+                               <img 
+                                 src={h.image} 
+                                 alt="" 
+                                 className="w-full h-full object-cover translate-x-4" 
+                                 referrerPolicy="no-referrer"
+                               />
+                             </div>
+                           )}
+                        </motion.div>
+                      </RevealItem>
                     );
                   })}
-                </div>
+                </motion.div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
+
 
       {/* Fullscreen Certificate/Link Modal */}
       <AnimatePresence>

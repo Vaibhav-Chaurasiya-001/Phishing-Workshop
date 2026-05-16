@@ -5,6 +5,7 @@
 
 import { motion } from 'motion/react';
 import { Presentation, Award, FileText, Clock, MessageSquare, DollarSign } from 'lucide-react';
+import { RevealItem } from './ScrollReveal';
 
 export default function PerksSection() {
   const perks = [
@@ -43,36 +44,53 @@ export default function PerksSection() {
   return (
     <section className="py-24 bg-cyber-bg-alt/30 border-y border-cyber-border/50">
       <div className="max-w-7xl mx-auto px-6">
-        <motion.div
-           initial={{ opacity: 0, y: 20 }}
-           whileInView={{ opacity: 1, y: 0 }}
-           viewport={{ once: true }}
-           className="mb-16"
-        >
-          <p className="font-mono text-[10px] text-cyber-teal tracking-[0.2em] uppercase mb-4">// What Your School Gets</p>
-          <h2 className="text-4xl sm:text-5xl font-bold mb-6">Expert Education. Incredible Value.</h2>
-          <p className="text-cyber-muted max-w-2xl text-lg">This workshop is a complete, career-grade awareness package delivered at an affordable institutional rate.</p>
-        </motion.div>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {perks.map((perk, idx) => (
-            <motion.div
-              key={perk.title}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: idx * 0.05 }}
-              viewport={{ once: true }}
-              className="glass-card !p-8 group hover:border-cyber-teal/30 hover:shadow-[0_0_20px_rgba(0,212,170,0.05)] transition-all"
-            >
-              <div className="mb-6 p-4 bg-cyber-bg-alt rounded-2xl w-fit border border-cyber-border group-hover:border-cyber-teal/20 transition-all group-hover:bg-cyber-teal/5">
-                {perk.icon}
-              </div>
-              <h4 className="text-lg font-bold mb-3">{perk.title}</h4>
-              <p className="text-sm text-cyber-muted leading-relaxed line-clamp-3">{perk.desc}</p>
-            </motion.div>
-          ))}
+        <div className="mb-16">
+          <RevealItem>
+            <p className="font-mono text-[10px] text-cyber-teal tracking-[0.2em] uppercase mb-4">// What Your School Gets</p>
+          </RevealItem>
+          <RevealItem>
+            <h2 className="text-4xl sm:text-5xl font-bold mb-6">Expert Education. Incredible Value.</h2>
+          </RevealItem>
+          <RevealItem>
+            <p className="text-cyber-muted max-w-2xl text-lg">This workshop is a complete, career-grade awareness package delivered at an affordable institutional rate.</p>
+          </RevealItem>
         </div>
+
+        <motion.div 
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            hidden: { opacity: 0 },
+            visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
+          }}
+        >
+          {perks.map((perk) => (
+            <RevealItem key={perk.title}>
+              <motion.div
+                whileHover={{ 
+                  y: -10, 
+                  borderColor: 'var(--color-cyber-teal)',
+                  backgroundColor: 'rgba(17, 24, 32, 0.6)'
+                }}
+                className="glass-card !p-8 group hover:border-cyber-teal/30 hover:shadow-[0_20px_50px_rgba(0,212,170,0.1)] transition-all h-full bg-cyber-card-alt/30"
+              >
+                <motion.div 
+                  className="mb-6 p-4 bg-cyber-bg-alt rounded-2xl w-fit border border-cyber-border group-hover:border-cyber-teal/20 transition-all group-hover:bg-cyber-teal/5"
+                  animate={{ rotate: [0, 5, 0] }}
+                  transition={{ duration: 5, repeat: Infinity }}
+                >
+                  {perk.icon}
+                </motion.div>
+                <h4 className="text-lg font-bold mb-3 group-hover:text-cyber-teal transition-colors">{perk.title}</h4>
+                <p className="text-sm text-cyber-muted leading-relaxed line-clamp-3">{perk.desc}</p>
+              </motion.div>
+            </RevealItem>
+          ))}
+        </motion.div>
       </div>
     </section>
   );
 }
+
