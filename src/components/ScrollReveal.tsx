@@ -64,10 +64,9 @@ export default function ScrollReveal({ children, className = "", stagger = false
   );
 }
 
-export const RevealItem = ({ children, className = "", key }: { children: ReactNode; className?: string; key?: string | number }) => {
+export const RevealItem = ({ children, className = "" }: { children: ReactNode; className?: string; key?: string | number }) => {
   return (
     <motion.div
-      key={key}
       className={className}
       variants={{
         hidden: { opacity: 0, y: 30, filter: "blur(4px)" },

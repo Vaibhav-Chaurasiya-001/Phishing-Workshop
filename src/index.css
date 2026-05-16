@@ -32,13 +32,13 @@
 }
 
 @layer base {
-  body {
+  html, body {
     @apply bg-cyber-bg text-cyber-white font-sans selection:bg-cyber-teal/30 selection:text-cyber-teal;
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none;  /* IE and Edge */
   }
 
-  body::-webkit-scrollbar {
+  ::-webkit-scrollbar {
     display: none; /* Chrome, Safari and Opera */
   }
 
