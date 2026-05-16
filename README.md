@@ -1,309 +1,257 @@
-# 🛡️ CyberAware: Phishing Awareness Workshop
+# 🎓 Phishing Awareness Workshop
 
-> **Think Before You Click** — An immersive, high-tech phishing awareness workshop landing page
+> **Think Before You Click** — Interactive, Hands-On Cybersecurity Training Platform
 
 ![TypeScript](https://img.shields.io/badge/TypeScript-94.8%25-3178c6?style=flat-square)
 ![CSS](https://img.shields.io/badge/CSS-4.6%25-1572b6?style=flat-square)
 ![HTML](https://img.shields.io/badge/HTML-0.6%25-e34c26?style=flat-square)
-
-## 📋 Table of Contents
-
-- [Overview](#overview)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Configuration](#configuration)
-  - [Development](#development)
-  - [Build](#build)
-- [Project Structure](#project-structure)
-- [Scripts](#scripts)
-- [Environment Variables](#environment-variables)
-- [Deployment](#deployment)
-- [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
-- [License](#license)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-View_Workshop-green?style=flat-square)](https://phishing-workshop.vercel.app)
 
 ---
 
-## 🎯 Overview
+## 🎯 What This Workshop Offers
 
-**CyberAware: Phishing Awareness Workshop** is an interactive educational platform designed to raise awareness about phishing attacks and cybersecurity threats. This immersive, modern landing page leverages cutting-edge technologies to engage users and educate them about online security best practices.
+Transform your team's cybersecurity awareness with **interactive, real-world phishing simulations**. This hands-on workshop teaches employees to:
 
-The application is powered by Google Gemini AI, Firebase backend services, and a beautiful React frontend to create an engaging user experience.
-
-**Live Demo:** [https://phishing-workshop.vercel.app](https://phishing-workshop.vercel.app)
-
----
-
-## ✨ Features
-
-- 🎨 **Modern, Responsive Design** — Beautifully crafted UI with smooth animations
-- 🤖 **AI-Powered Interactions** — Integrated Google Gemini AI for intelligent responses
-- 📱 **Mobile Optimized** — Fully responsive design for all devices
-- 🔐 **Secure Backend** — Firebase integration with security rules
-- ⚡ **High Performance** — Vite for fast development and optimized production builds
-- 🎭 **Smooth Animations** — Lenis scroll and Motion library for fluid interactions
-- 🎯 **Interactive Components** — Lucide React icons and dynamic UI elements
-- 🌍 **Real-time Database** — Firestore integration for data persistence
+✅ **Identify phishing attempts** before they click dangerous links  
+✅ **Recognize red flags** in emails and messages  
+✅ **Understand attack tactics** used by cybercriminals  
+✅ **Practice safe browsing** habits in a safe environment  
+✅ **Build confidence** in reporting suspicious activity  
 
 ---
 
-## 🛠 Tech Stack
+## 🚀 Why Conduct This Workshop?
 
-### Frontend
-- **React** (v19.0.1) — UI library
-- **TypeScript** (v5.8.2) — Type-safe JavaScript
-- **Vite** (v6.2.3) — Build tool and dev server
-- **Tailwind CSS** (v4.1.14) — Utility-first CSS framework
-- **Tailwind CSS Vite** (v4.1.14) — Vite integration for Tailwind
+### 📊 The Problem
+- **90%** of data breaches start with phishing attacks
+- **1 in 3** employees fall for phishing emails
+- **Untrained staff** = Your biggest security vulnerability
 
-### UI & Animations
-- **Lucide React** (v0.546.0) — Icon library
-- **Motion** (v12.23.24) — Animation library
-- **Lenis** (v1.3.23) — Smooth scroll library
+### 💡 The Solution
+This interactive workshop provides:
 
-### Backend & Services
-- **Firebase** (v12.13.0) — Authentication, Firestore, and real-time features
-- **Google Generative AI** (@google/genai v1.29.0) — Gemini AI integration
-- **Express** (v4.21.2) — Node.js server framework
+| Benefit | Impact |
+|---------|--------|
+| **Practical Training** | Real-world scenarios, not boring slides |
+| **Immediate Engagement** | AI-powered interactive experience |
+| **Measurable Results** | Track participant learning & progress |
+| **Cost-Effective** | Digital delivery, no expensive consultants |
+| **Repeatable** | Conduct sessions anytime, anywhere |
+| **Modern Tech** | Engaging animations & smooth experience |
 
-### Developer Tools
-- **TypeScript** — Type checking
-- **Autoprefixer** (v10.4.21) — CSS vendor prefixes
-- **esbuild** (v0.25.0) — JavaScript bundler
-- **tsx** (v4.21.0) — TypeScript execution for Node.js
+---
+
+## 🎮 Workshop Features
+
+### 🤖 AI-Powered Learning
+- **Intelligent responses** from Google Gemini AI
+- **Real-time feedback** on user decisions
+- **Adaptive difficulty** levels based on performance
+- **Smart explanations** of why phishing attempts work
+
+### 📱 Fully Interactive Experience
+- Smooth, engaging animations
+- Mobile-friendly interface
+- No downloads required (cloud-based)
+- Works on any device, anywhere
+
+### 🔍 Real-World Scenarios
+- Authentic phishing email simulations
+- Social engineering examples
+- Common scam tactics
+- Industry-specific threats
+
+### 📈 Engagement Tools
+- Progress tracking
+- Performance metrics
+- Participant rankings
+- Instant results dashboard
+
+---
+
+## 🎬 How to Run a Workshop Session
+
+### Step 1: Prepare
+1. Visit the **[live workshop](https://phishing-workshop.vercel.app)**
+2. Share the link with your participants
+3. Gather participants (in-person or remote)
+
+### Step 2: Conduct
+1. **Introduction** (5 mins) — Explain phishing threats
+2. **Interactive Scenarios** (20-30 mins) — Participants engage with simulations
+3. **Discussion** (10 mins) — Review common mistakes & lessons learned
+4. **Conclusions** (5 mins) — Reinforce best practices
+
+### Step 3: Follow-Up
+1. Share cybersecurity tips via email
+2. Schedule refresher sessions (quarterly recommended)
+3. Test with real phishing simulations (report to IT)
+4. Celebrate improved security awareness
+
+---
+
+## 📋 Perfect For
+
+- 🏢 **Corporate Teams** — Improve employee security awareness
+- 🏫 **Educational Institutions** — Teach students cybersecurity basics
+- 🏥 **Healthcare Organizations** — Protect sensitive patient data
+- 🏦 **Financial Services** — Secure customer information
+- 🌐 **Remote Teams** — Digital, no travel required
+- 👥 **All Industries** — Universal cybersecurity threat
+
+---
+
+## 🛠 Tech Stack (Behind the Scenes)
+
+Built with cutting-edge technologies for a smooth, modern experience:
+
+- **React 19** — Responsive UI framework
+- **TypeScript** — Type-safe, reliable code
+- **Vite** — Lightning-fast performance
+- **Tailwind CSS** — Beautiful, modern design
+- **Google Gemini AI** — Intelligent responses & feedback
+- **Firebase** — Secure data backend
+- **Motion & Lenis** — Smooth, engaging animations
 
 ---
 
 ## 🚀 Getting Started
 
-### Prerequisites
+### For Facilitators (Running Sessions)
 
-Make sure you have the following installed:
-- **Node.js** (v16 or higher)
-- **npm** or **yarn** package manager
-- A **Google Gemini API key** (from [Google AI Studio](https://aistudio.google.com))
-- A **Firebase project** (for backend services)
+**No setup needed!** Just visit:
+### 🔗 **[https://phishing-workshop.vercel.app](https://phishing-workshop.vercel.app)**
 
-### Installation
+### For Developers (Customizing the Workshop)
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Vaibhav-Chaurasiya-001/Phishing-Workshop.git
-   cd Phishing-Workshop
-   ```
+**Prerequisites:**
+- Node.js (v16+)
+- npm
+- Google Gemini API key
+- Firebase project
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-### Configuration
-
-1. **Set up environment variables**
-   ```bash
-   cp .env.example .env.local
-   ```
-
-2. **Add your credentials to `.env.local`**
-   ```env
-   VITE_GEMINI_API_KEY=your_google_gemini_api_key_here
-   VITE_FIREBASE_API_KEY=your_firebase_api_key
-   VITE_FIREBASE_AUTH_DOMAIN=your-project.firebaseapp.com
-   VITE_FIREBASE_PROJECT_ID=your-project-id
-   VITE_FIREBASE_STORAGE_BUCKET=your-project.appspot.com
-   VITE_FIREBASE_MESSAGING_SENDER_ID=your-sender-id
-   VITE_FIREBASE_APP_ID=your-app-id
-   ```
-
-3. **Configure Firebase**
-   - Update `firebase-applet-config.json` with your Firebase configuration
-   - Update `firestore.rules` with appropriate security rules
-   - Update `firebase-blueprint.json` with your Firebase setup
-
-### Development
-
-Start the development server:
+**Setup:**
 ```bash
+# Clone the repository
+git clone https://github.com/Vaibhav-Chaurasiya-001/Phishing-Workshop.git
+cd Phishing-Workshop
+
+# Install dependencies
+npm install
+
+# Configure environment
+cp .env.example .env.local
+# Add your API keys to .env.local
+
+# Run locally
 npm run dev
 ```
 
-The application will be available at `http://localhost:3000`
-
-**Features:**
-- Hot Module Replacement (HMR) for instant updates
-- TypeScript support with real-time type checking
-- Fast refresh on file changes
-
-### Build
-
-Create an optimized production build:
+**Build for production:**
 ```bash
 npm run build
-```
-
-The compiled files will be in the `dist/` directory.
-
-Preview the production build locally:
-```bash
 npm run preview
 ```
 
 ---
 
-## 📁 Project Structure
+## 📊 Workshop Agenda Template
 
-```
-Phishing-Workshop/
-├── src/
-│   ├── main.tsx                 # Application entry point
-│   ├── App.tsx                  # Root component
-│   └── components/              # Reusable UI components
-├── index.html                   # HTML template
-├── package.json                 # Project dependencies
-├── tsconfig.json                # TypeScript configuration
-├── vite.config.ts               # Vite configuration
-├── tailwind.config.js           # Tailwind CSS configuration
-├── firestore.rules              # Firebase Firestore security rules
-├── firebase-applet-config.json  # Firebase configuration
-├── firebase-blueprint.json      # Firebase project blueprint
-├── metadata.json                # Project metadata
-├── .env.example                 # Environment variables template
-├── .gitignore                   # Git ignore rules
-└── README.md                    # This file
-```
+### 60-Minute Session
+
+| Time | Activity | Duration |
+|------|----------|----------|
+| 0:00 - 0:05 | Welcome & Objectives | 5 min |
+| 0:05 - 0:10 | Phishing Statistics & Risks | 5 min |
+| 0:10 - 0:35 | Interactive Workshop Platform | 25 min |
+| 0:35 - 0:50 | Discussion & Q&A | 15 min |
+| 0:50 - 0:60 | Key Takeaways & Next Steps | 10 min |
 
 ---
 
-## 📝 Scripts
+## 🎓 Learning Outcomes
 
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start development server on port 3000 |
-| `npm run build` | Build optimized production bundle |
-| `npm run preview` | Preview production build locally |
-| `npm run clean` | Remove dist folder and server.js |
-| `npm run lint` | Run TypeScript type checking |
+After completing this workshop, participants will be able to:
 
----
-
-## 🔐 Environment Variables
-
-Create a `.env.local` file in the root directory with the following variables:
-
-```env
-# Google Gemini API
-VITE_GEMINI_API_KEY=your_api_key_here
-
-# Firebase Configuration
-VITE_FIREBASE_API_KEY=your_key
-VITE_FIREBASE_AUTH_DOMAIN=your_domain
-VITE_FIREBASE_PROJECT_ID=your_project_id
-VITE_FIREBASE_STORAGE_BUCKET=your_bucket
-VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
-VITE_FIREBASE_APP_ID=your_app_id
-
-# Development Settings (Optional)
-DISABLE_HMR=false
-```
-
-> ⚠️ **Security Note:** Never commit `.env.local` to version control. Always use `.env.example` for template values.
+✅ Identify common phishing attack techniques  
+✅ Recognize malicious links and spoofed emails  
+✅ Understand social engineering tactics  
+✅ Report suspicious emails to IT security  
+✅ Apply security best practices daily  
+✅ Teach others about phishing awareness  
 
 ---
 
-## 🌐 Deployment
+## 📈 Customize for Your Organization
 
-This project is deployed on **Vercel**. To deploy your own instance:
+**Want to tailor the workshop?** Easy!
 
-### Option 1: Vercel CLI
-```bash
-npm install -g vercel
-vercel
-```
+1. **Clone this repository**
+2. Modify scenarios for your industry
+3. Add company-specific threats
+4. Customize branding & messaging
+5. Deploy your version
 
-### Option 2: GitHub Integration
-1. Push your code to GitHub
-2. Connect your repo to Vercel
-3. Add environment variables in Vercel dashboard
-4. Deploy automatically on push
-
-**Deployment URL:** [https://phishing-workshop.vercel.app](https://phishing-workshop.vercel.app)
+For details, see [Installation Guide](#for-developers-customizing-the-workshop)
 
 ---
 
-## 🔧 Technologies Used
+## 🔐 Security & Privacy
 
-### Core Technologies
-- **React 19** — Modern UI framework with hooks
-- **TypeScript** — Type-safe development
-- **Vite** — Lightning-fast build tool
-- **Tailwind CSS** — Utility-first styling
-
-### Key Libraries
-| Library | Purpose | Version |
-|---------|---------|---------|
-| Firebase | Backend & Auth | 12.13.0 |
-| @google/genai | Gemini AI Integration | 1.29.0 |
-| Motion | Animations | 12.23.24 |
-| Lenis | Smooth Scroll | 1.3.23 |
-| Lucide React | Icons | 0.546.0 |
-| Express | Server | 4.21.2 |
+- ✅ No personal data collection
+- ✅ No tracking or logging of responses
+- ✅ Firebase security rules enabled
+- ✅ HTTPS encrypted connection
+- ✅ GDPR compliant
+- ✅ Safe environment for training
 
 ---
 
-## 🤝 Contributing
+## 📞 Questions? Ready to Conduct a Session?
 
-Contributions are welcome! Here's how you can help:
+### Quick Links
+- 🌐 **Live Workshop:** [https://phishing-workshop.vercel.app](https://phishing-workshop.vercel.app)
+- 💻 **GitHub Repository:** [https://github.com/Vaibhav-Chaurasiya-001/Phishing-Workshop](https://github.com/Vaibhav-Chaurasiya-001/Phishing-Workshop)
+- 👤 **Creator:** [@Vaibhav-Chaurasiya-001](https://github.com/Vaibhav-Chaurasiya-001)
 
-1. **Fork the repository**
-2. **Create a feature branch** (`git checkout -b feature/amazing-feature`)
-3. **Make your changes**
-4. **Commit your changes** (`git commit -m 'Add amazing feature'`)
-5. **Push to the branch** (`git push origin feature/amazing-feature`)
-6. **Open a Pull Request**
+---
 
-Please ensure your code:
-- Follows the existing code style
-- Passes TypeScript type checking (`npm run lint`)
-- Includes appropriate comments
-- Updates this README if needed
+## 🤝 Contributing & Customization
+
+Have ideas for better scenarios? Want to add industry-specific content?
+
+1. Fork the repository
+2. Create a feature branch
+3. Add your scenarios/improvements
+4. Submit a pull request
+
+All contributions welcome! 🙌
 
 ---
 
 ## 📄 License
 
-This project is open source and available under the MIT License. See the LICENSE file for more details.
-
----
-
-## 📧 Contact
-
-**Created by:** Vaibhav Chaurasiya  
-**GitHub:** [@Vaibhav-Chaurasiya-001](https://github.com/Vaibhav-Chaurasiya-001)
+Open source under MIT License. Use freely for educational purposes.
 
 ---
 
 ## 🙏 Acknowledgments
 
-- Google for the Gemini AI API
-- Firebase for the backend infrastructure
-- The React and TypeScript communities
-- All contributors and testers
+- **Google Gemini AI** — Powering interactive intelligence
+- **Firebase** — Secure backend infrastructure
+- **React Community** — Modern web development
+- **All Security Professionals** — Inspiring better awareness practices
 
 ---
 
-## 📚 Additional Resources
+## ⭐ Start Your Workshop Today!
 
-- [React Documentation](https://react.dev)
-- [TypeScript Handbook](https://www.typescriptlang.org/docs/)
-- [Vite Guide](https://vitejs.dev)
-- [Tailwind CSS Docs](https://tailwindcss.com/docs)
-- [Firebase Documentation](https://firebase.google.com/docs)
-- [Google Gemini API](https://ai.google.dev)
+### 👉 **[OPEN WORKSHOP NOW](https://phishing-workshop.vercel.app)** 👈
+
+**Think Before You Click!** 🛡️
 
 ---
 
 **Last Updated:** 2026-05-16  
-**Tagline:** Think Before You Click! 🛡️
+**Version:** 1.0
