@@ -6,12 +6,12 @@
 import { motion } from 'motion/react';
 import { Terminal } from 'lucide-react';
 
-export default function Navbar() {
+export default function Navbar({ onBookClick }: { onBookClick: () => void }) {
   const links = [
     { name: 'About', href: '#about' },
     { name: 'Curriculum', href: '#curriculum' },
     { name: 'Trainer', href: '#trainer' },
-    { name: 'Book Now', href: '#contact' },
+    { name: 'Book Now', href: '#contact', isAction: true },
   ];
 
   return (
@@ -31,8 +31,16 @@ export default function Navbar() {
             <motion.a 
               key={link.name} 
               href={link.href}
+              onClick={(e) => {
+                if (link.isAction) {
+                  e.preventDefault();
+                  onBookClick();
+                }
+              }}
               whileHover="hover"
-              className="relative text-sm font-medium text-cyber-muted hover:text-cyber-white transition-colors tracking-wide py-2 overflow-hidden"
+              className={`relative text-sm font-medium transition-colors tracking-wide py-2 overflow-hidden ${
+                link.isAction ? 'text-cyber-teal hover:text-cyber-teal-light' : 'text-cyber-muted hover:text-cyber-white'
+              }`}
             >
               {link.name}
               <motion.div 

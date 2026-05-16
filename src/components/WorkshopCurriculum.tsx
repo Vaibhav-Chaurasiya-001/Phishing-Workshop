@@ -6,7 +6,7 @@
 import { motion } from 'motion/react';
 import { RevealItem } from './ScrollReveal';
 
-export default function WorkshopCurriculum() {
+export default function WorkshopCurriculum({ onBookClick }: { onBookClick: () => void }) {
   const steps = [
     {
       num: '01',
@@ -89,6 +89,19 @@ export default function WorkshopCurriculum() {
             </RevealItem>
           ))}
         </motion.div>
+
+        <div className="mt-16 text-center">
+          <RevealItem>
+            <motion.button
+              onClick={onBookClick}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-10 py-5 bg-cyber-bg border border-cyber-teal text-cyber-teal font-bold rounded-lg hover:bg-cyber-teal hover:text-cyber-bg transition-all shadow-[0_0_20px_rgba(0,212,170,0.1)]"
+            >
+              Book This Session
+            </motion.button>
+          </RevealItem>
+        </div>
       </div>
     </section>
   );

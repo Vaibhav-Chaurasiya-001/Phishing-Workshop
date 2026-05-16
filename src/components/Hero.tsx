@@ -8,7 +8,7 @@ import ProfileCard from './ProfileCard';
 import { ChevronRight } from 'lucide-react';
 import { RevealItem } from './ScrollReveal';
 
-export default function Hero() {
+export default function Hero({ onBookClick }: { onBookClick: () => void; key?: string }) {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -69,15 +69,15 @@ export default function Hero() {
           
           <RevealItem>
             <div className="flex flex-wrap gap-6">
-              <motion.a
-                href="#contact"
+              <motion.button
+                onClick={onBookClick}
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 className="px-10 py-5 bg-cyber-teal text-cyber-bg font-bold rounded-lg shadow-[0_0_20px_rgba(0,212,170,0.3)] hover:shadow-[0_0_30px_rgba(0,212,170,0.5)] transition-all flex items-center gap-2 group"
               >
                 Book the Workshop
                 <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
-              </motion.a>
+              </motion.button>
               
               <motion.a
                 href="#curriculum"

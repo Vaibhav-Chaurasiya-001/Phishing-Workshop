@@ -7,7 +7,7 @@ import { motion } from 'motion/react';
 import { Mail, MessageCircle, Linkedin, ArrowRight } from 'lucide-react';
 import { RevealItem } from './ScrollReveal';
 
-export default function ContactSection() {
+export default function ContactSection({ onBookClick }: { onBookClick: () => void }) {
   return (
     <section id="contact" className="py-24 relative overflow-hidden">
       {/* Decorative Blur */}
@@ -34,6 +34,7 @@ export default function ContactSection() {
               
               <RevealItem>
                 <motion.button
+                  onClick={onBookClick}
                   whileHover={{ scale: 1.05, y: -2, boxShadow: "0 0 50px rgba(0,212,170,0.5)" }}
                   whileTap={{ scale: 0.98 }}
                   className="px-12 py-6 bg-cyber-teal text-cyber-bg font-bold rounded-xl shadow-[0_0_30px_rgba(0,212,170,0.3)] transition-all flex items-center gap-3 mx-auto mb-16 text-lg"
